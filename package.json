@@ -1,0 +1,17 @@
+{
+  "name": "lemo-validator",
+  "description": "Extended validation",
+  "version": "0.2.0",
+  "main": "src/index.js",
+  "author": "Matej Szendi <matej.szendi@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "npm run build"
+  },
+  "dependencies": {
+    "validator": "^10.*"
+  },
+  "files": [
+    "src/"
+  ]
+}
