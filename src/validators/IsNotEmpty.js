@@ -4,18 +4,17 @@ import options from "../options";
 // Validator
 import validator from "validator";
 
-class IsEmpty {
+class IsNotEmpty {
 
     constructor (config = {}) {
         this.messages = {
-            isEmpty: options.messages.isEmpty,
+            isNotEmpty: options.messages.isNotEmpty,
         };
-
 
         if (config instanceof Object) {
             if (config.hasOwnProperty('messages')) {
-                if (config.messages.hasOwnProperty('isEmpty')) {
-                    this.messages.isEmpty = config.messages.isEmpty;
+                if (config.messages.hasOwnProperty('isNotEmpty')) {
+                    this.messages.isNotEmpty = config.messages.isNotEmpty;
                 }
             }
         }
@@ -26,12 +25,12 @@ class IsEmpty {
     }
 
     validate (value) {
-        if (!validator.isEmpty(value)) {
-            return this.messages.isEmpty;
+        if (validator.isEmpty(value)) {
+            return this.messages.isNotEmpty;
         }
 
         return null;
     }
 }
 
-export default IsEmpty;
+export default IsNotEmpty;

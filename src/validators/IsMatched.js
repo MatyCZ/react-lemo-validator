@@ -37,7 +37,7 @@ class IsMatched {
             return null;
         }
 
-        if (!validator.matches(value, this.pattern, this.modifiers)) {
+        if (!validator.matches(value, this.pattern, this.modifiers || '')) {
             return this.messages.isMatched;
         }
 

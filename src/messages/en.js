@@ -5,8 +5,9 @@ const messages = {
     isDate: "The value is not a valid date.",
     isDateFormat: "The value is not a valid date by format :format.",
     isEmail: "The value is not a valid e-mail address.",
-    isEqual: "The value must be equal to :value.",
-    isEmpty: "The value is required.",
+    isEmpty: "The value must not be filled.",
+    isEqual: "The value must not be equal to :value.",
+    isEqualToField: "The value must not be equal to field :field.",
     isFile: "The value must be a file.",
     isIdentificationNumber: "The value is not a valid identification number.",
     isInt: "The value must be an integer.",
@@ -15,7 +16,9 @@ const messages = {
     isLengthLong: "The value must have maximum :max characters.",
     isLengthShort: "The value must have minimum :min characters.",
     isMatched: "The value must match the pattern.",
-    isNotEqual: "The value must not be equal to :value.",
+    isNotEmpty: "The value must be filled.",
+    isNotEqual: "The value must be equal to :value.",
+    isNotEqualToField: "The value must be equal to field :field.",
     isPostalCode: "The value is not a valid postal code.",
 };
 

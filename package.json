@@ -1,17 +1,22 @@
 {
   "name": "lemo-validator",
   "description": "Extended validation",
-  "version": "0.2.0",
+  "version": "0.4.1",
   "main": "src/index.js",
   "author": "Matej Szendi <matej.szendi@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MatyCZ/lemo-validator"
+  },
   "scripts": {
     "build": "npm run build"
   },
   "dependencies": {
-    "validator": "^10.*"
+    "validator": "10.x"
   },
   "files": [
-    "src/"
+    "src/",
+    "LICENCE"
   ]
 }
