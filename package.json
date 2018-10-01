@@ -1,7 +1,7 @@
 {
   "name": "lemo-validator",
   "description": "Lemo validator",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "author": "Matej Szendi <matej.szendi@gmail.com>",
   "license": "MIT",
   "keywords": [

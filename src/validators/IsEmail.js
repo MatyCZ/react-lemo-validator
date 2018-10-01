@@ -10,7 +10,7 @@ class IsEmail {
 
     constructor (config = {}) {
         this.messages = {
-            isEmail: options.messages.isEmail,
+            isEmail: getMessage('isEmail'),
         };
 
         if (config instanceof Object) {
