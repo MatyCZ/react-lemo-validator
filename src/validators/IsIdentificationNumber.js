@@ -1,5 +1,7 @@
-// Options
-import options from "../options";
+// Config
+import {
+    getMessage
+} from "../config";
 
 // Validator
 import validator from "validator";
@@ -8,7 +10,7 @@ class IsIdentificationNumber {
 
     constructor (config = {}) {
         this.messages = {
-            isIdentificationNumber: options.messages.isIdentificationNumber,
+            isIdentificationNumber: getMessage('isIdentificationNumber'),
         };
 
         if (config instanceof Object) {

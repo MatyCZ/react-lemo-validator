@@ -1,5 +1,7 @@
-// Constants
-import options from "../options";
+// Config
+import {
+    getMessage
+} from "../config";
 
 // Validator
 import validator from "validator";
@@ -8,7 +10,7 @@ class IsNotEqual {
 
     constructor (config = {}) {
         this.messages = {
-            isNotEqual: options.messages.isNotEqual,
+            isNotEqual: getMessage('isNotEqual'),
         };
         this.value = null;
 

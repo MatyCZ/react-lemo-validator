@@ -1,5 +1,8 @@
-// Options
-import options from "../options";
+// Config
+import {
+    getLocale,
+    getMessage
+} from "../config";
 
 // Validator
 import validator from "validator";
@@ -7,9 +10,9 @@ import validator from "validator";
 class IsAlphanumeric {
 
     constructor (config = {}) {
-        this.locale = options.locale;
+        this.locale = getLocale();
         this.messages = {
-            isAlphanumeric: options.messages.isAlphanumeric,
+            isAlphanumeric: getMessage('isAlphanumeric'),
         };
 
         if (config instanceof Object) {

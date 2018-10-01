@@ -1,22 +1,41 @@
 {
   "name": "lemo-validator",
-  "description": "Extended validation",
-  "version": "0.4.1",
-  "main": "src/index.js",
+  "description": "Lemo validator",
+  "version": "0.4.3",
   "author": "Matej Szendi <matej.szendi@gmail.com>",
   "license": "MIT",
+  "keywords": [
+    "lemo"
+  ],
+  "main": "lib/lemo-validator.umd.js",
+  "module": "lib/lemo-validator.es.js",
+  "jsnext:main": "lib/lemo-validator.es.js",
+  "scripts": {
+    "build": "rollup -c",
+    "prettier": "prettier --write 'src/**/*.{js,jsx}'",
+    "prettier:check": "prettier --list-different 'src/**/*.{js,jsx}'"
+  },
+  "files": [
+    "lib",
+    "messages",
+    "src",
+    "LICENSE"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/MatyCZ/lemo-validator"
   },
-  "scripts": {
-    "build": "npm run build"
-  },
   "dependencies": {
     "validator": "10.x"
   },
-  "files": [
-    "src/",
-    "LICENCE"
-  ]
+  "devDependencies": {
+    "@babel/core": "7.x",
+    "@babel/preset-env": "7.x",
+    "@babel/preset-react": "7.x",
+    "prettier": "1.x",
+    "rollup": "0.66.x",
+    "rollup-plugin-babel": "4.x",
+    "rollup-plugin-commonjs": "8.x",
+    "rollup-plugin-node-resolve": "3.x"
+  }
 }

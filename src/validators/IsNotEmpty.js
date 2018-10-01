@@ -1,5 +1,7 @@
-// Options
-import options from "../options";
+// Config
+import {
+    getMessage
+} from "../config";
 
 // Validator
 import validator from "validator";
@@ -8,7 +10,7 @@ class IsNotEmpty {
 
     constructor (config = {}) {
         this.messages = {
-            isNotEmpty: options.messages.isNotEmpty,
+            isNotEmpty: getMessage('isNotEmpty'),
         };
 
         if (config instanceof Object) {

@@ -1,5 +1,7 @@
-// Options
-import options from "../options";
+// Config
+import {
+    getMessage
+} from "../config";
 
 // Validator
 import validator from "validator";
@@ -8,7 +10,7 @@ class IsMatched {
 
     constructor (config = {}) {
         this.messages = {
-            isMatched: options.messages.isMatched,
+            isMatched: getMessage('isMatched'),
         };
         this.modifiers = null;
         this.pattern = null;

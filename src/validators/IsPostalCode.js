@@ -1,16 +1,18 @@
-// Options
-import options from "../options";
+// Config
+import {
+    getLocale,
+    getMessage
+} from "../config";
 
 // Validator
 import validator from "validator";
 
-
 class IsPostalCode {
 
     constructor (config = {}) {
-        this.locale = options.locale.substr(3, 2);
+        this.locale = getLocale().substr(3, 2);
         this.messages = {
-            isPostalCode: options.messages.isPostalCode,
+            isPostalCode: getMessage('isPostalCode'),
         };
 
         if (config instanceof Object) {

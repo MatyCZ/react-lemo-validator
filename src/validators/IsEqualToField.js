@@ -1,5 +1,7 @@
-// Options
-import options from "../options";
+// Config
+import {
+    getMessage
+} from "../config";
 
 // Validator
 import Validator from "validator";
@@ -10,7 +12,7 @@ class IsEqualToField {
         this.fieldLeft = null;
         this.fieldRight = null;
         this.messages = {
-            isEqualToField: options.messages.isEqualToField,
+            isEqualToField: getMessage('isEqualToField'),
         };
 
         if (config instanceof Object) {
@@ -29,6 +31,10 @@ class IsEqualToField {
                 }
             }
         }
+    }
+
+    isValid(value, values) {
+        return (null === this.validate(value, values));
     }
 
     validate (value, values) {

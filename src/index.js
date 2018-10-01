@@ -1,3 +1,11 @@
+import {
+    getLocale,
+    getMessage,
+    getMessages,
+    setLocale,
+    setMessages
+} from "./config";
+
 import IsAlphnumeric from "./validators/IsAlphnumeric";
 import IsBirthNumber from "./validators/IsBirthNumber";
 import IsEmail from "./validators/IsEmail";
@@ -14,6 +22,11 @@ import IsNotEqualToField from "./validators/IsNotEqualToField";
 import IsPostalCode from "./validators/IsPostalCode";
 
 export {
+    getLocale,
+    getMessage,
+    getMessages,
+    setLocale,
+    setMessages,
     IsAlphnumeric,
     IsBirthNumber,
     IsEmail,

@@ -1,5 +1,7 @@
-// Options
-import options from "../options";
+// Config
+import {
+    getMessage
+} from "../config";
 
 // Validator
 import validator from "validator";
@@ -9,10 +11,10 @@ class IsLength {
     constructor (config = {}) {
         this.max = null;
         this.messages = {
-            isLength: options.messages.isLength,
-            isLengthBetween: options.messages.isLengthBetween,
-            isLengthLong: options.messages.isLengthLong,
-            isLengthShort: options.messages.isLengthShort,
+            isLength: getMessage('isLength'),
+            isLengthBetween: getMessage('isLengthBetween'),
+            isLengthLong: getMessage('isLengthLong'),
+            isLengthShort: getMessage('isLengthShort'),
         };
         this.min = null;
 

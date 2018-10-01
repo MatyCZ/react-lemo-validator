@@ -1,5 +1,7 @@
-// Options
-import options from "../options";
+// Config
+import {
+    getMessage
+} from "../config";
 
 // Validator
 import validator from "validator";
@@ -8,7 +10,7 @@ class IsBirthNumber {
 
     constructor (config = {}) {
         this.messages = {
-            isBirthNumber: options.messages.isBirthNumber,
+            isBirthNumber: getMessage('isBirthNumber'),
         };
 
         if (config instanceof Object) {
