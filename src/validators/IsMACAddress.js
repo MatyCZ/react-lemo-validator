@@ -12,12 +12,16 @@ class IsMACAddress {
         this.messages = {
             isMACAddress: getMessage('isMACAddress'),
         };
+        this.noColons = false;
 
         if (config instanceof Object) {
             if (config.hasOwnProperty('messages')) {
                 if (config.messages.hasOwnProperty('isMACAddress')) {
                     this.messages.isMACAddress = config.messages.isMACAddress;
                 }
+            }
+            if (config.hasOwnProperty('noColons')) {
+                this.noColons = config.noColons;
             }
         }
     }
@@ -31,7 +35,7 @@ class IsMACAddress {
             return null;
         }
 
-        if (!validator.isMACAddress(value)) {
+        if (!validator.isMACAddress(value, {'no_colons': this.noColons})) {
             return this.messages.isMACAddress;
         }
 
