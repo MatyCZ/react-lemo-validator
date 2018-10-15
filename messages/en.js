@@ -15,6 +15,7 @@ const messages = {
     isLengthBetween: "The value must be between :min and :max characters.",
     isLengthLong: "The value must have maximum :max characters.",
     isLengthShort: "The value must have minimum :min characters.",
+    isMACAddress: "The value is not a valid MAC address.",
     isMatched: "The value must match the pattern.",
     isNotEmpty: "The value must be filled.",
     isNotEqual: "The value must be equal to :value.",

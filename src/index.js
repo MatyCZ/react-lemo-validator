@@ -15,6 +15,7 @@ import IsEqualToField from "./validators/IsEqualToField";
 import IsIdentificationNumber from "./validators/IsIdentificationNumber";
 import IsInt from "./validators/IsInt";
 import IsLength from "./validators/IsLength";
+import IsMACAddress from "./validators/IsMACAddress";
 import IsMatched from "./validators/IsMatched";
 import IsNotEmpty from "./validators/IsNotEmpty";
 import IsNotEqual from "./validators/IsNotEqual";
@@ -36,6 +37,7 @@ export {
     IsIdentificationNumber,
     IsInt,
     IsLength,
+    IsMACAddress,
     IsMatched,
     IsNotEmpty,
     IsNotEqual,

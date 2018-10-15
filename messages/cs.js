@@ -15,6 +15,7 @@ const messages = {
     isLengthBetween: "Hodnota musí mít :min až :max znaky.",
     isLengthLong: "Hodnota musí mít maximálně :max znaky.",
     isLengthShort: "Hodnota musí mít minimálně :min znaky.",
+    isMACAddress: "Hodnota musí být platná MAC adresa.",
     isMatched: "Hodnota musí odpovídat šabloně.",
     isNotEmpty: "Hodnota musí být vyplněna.",
     isNotEqual: "Hodnota musí být shodná s :value.",
