@@ -1,9 +1,9 @@
 import {
-    getLocale,
-    getMessage,
-    getMessages,
-    setLocale,
-    setMessages
+  getLocale,
+  getMessage,
+  getMessages,
+  setLocale,
+  setMessages
 } from "./config";
 
 import IsAlphnumeric from "./validators/IsAlphnumeric";
@@ -23,24 +23,24 @@ import IsNotEqualToField from "./validators/IsNotEqualToField";
 import IsPostalCode from "./validators/IsPostalCode";
 
 export {
-    getLocale,
-    getMessage,
-    getMessages,
-    setLocale,
-    setMessages,
-    IsAlphnumeric,
-    IsBirthNumber,
-    IsEmail,
-    IsEmpty,
-    IsEqual,
-    IsEqualToField,
-    IsIdentificationNumber,
-    IsInt,
-    IsLength,
-    IsMACAddress,
-    IsMatched,
-    IsNotEmpty,
-    IsNotEqual,
-    IsNotEqualToField,
-    IsPostalCode
-}
+  getLocale,
+  getMessage,
+  getMessages,
+  setLocale,
+  setMessages,
+  IsAlphnumeric,
+  IsBirthNumber,
+  IsEmail,
+  IsEmpty,
+  IsEqual,
+  IsEqualToField,
+  IsIdentificationNumber,
+  IsInt,
+  IsLength,
+  IsMACAddress,
+  IsMatched,
+  IsNotEmpty,
+  IsNotEqual,
+  IsNotEqualToField,
+  IsPostalCode
+};

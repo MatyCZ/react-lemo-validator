@@ -1,46 +1,43 @@
 // Config
-import {
-    getMessage
-} from "../config";
+import { getMessage } from "../config";
 
 // Validator
 import validator from "validator";
 
 class IsNotEqual {
+  constructor(config = {}) {
+    this.messages = {
+      isNotEqual: getMessage("isNotEqual")
+    };
+    this.value = null;
 
-    constructor (config = {}) {
-        this.messages = {
-            isNotEqual: getMessage('isNotEqual'),
-        };
-        this.value = null;
-
-        if (config instanceof Object) {
-            if (config.hasOwnProperty('messages')) {
-                if (config.messages.hasOwnProperty('isNotEqual')) {
-                    this.messages.isNotEqual = config.messages.isNotEqual;
-                }
-            }
-            if (config.hasOwnProperty('value')) {
-                this.value = config.value;
-            }
+    if (config instanceof Object) {
+      if (config.hasOwnProperty("messages")) {
+        if (config.messages.hasOwnProperty("isNotEqual")) {
+          this.messages.isNotEqual = config.messages.isNotEqual;
         }
+      }
+      if (config.hasOwnProperty("value")) {
+        this.value = config.value;
+      }
+    }
+  }
+
+  isValid(value) {
+    return null === this.validate(value);
+  }
+
+  validate(value) {
+    if (validator.isEmpty(value)) {
+      return null;
     }
 
-    isValid(value) {
-        return (null === this.validate(value));
+    if (validator.equals(value, this.value)) {
+      return this.messages.isNotEqual.replace(":value", this.value);
     }
 
-    validate (value) {
-        if (validator.isEmpty(value)) {
-            return null;
-        }
-
-        if (validator.equals(value, this.value)) {
-            return this.messages.isNotEqual.replace(':value', this.value);
-        }
-
-        return null;
-    }
+    return null;
+  }
 }
 
 export default IsNotEqual;
