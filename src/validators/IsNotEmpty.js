@@ -24,6 +24,16 @@ class IsNotEmpty {
   }
 
   validate(value) {
+    // Array validation
+    if (Array.isArray(value)) {
+      if (value.length > 0) {
+        return null;
+      }
+
+      return this.messages.isNotEmpty;
+    }
+
+    // String validation
     if (validator.isEmpty(value)) {
       return this.messages.isNotEmpty;
     }
